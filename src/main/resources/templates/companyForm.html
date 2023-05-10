@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+        crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Car</title>
+</head>
+<body>
+<h1>COMPANY FORM</h1>
+<form method="POST" th:action="@{/saveCompany}"
+      th:object="${companyInputDto}">
+  <div class="form-group">
+    <label for="companyName">Company Name</label>
+    <input th:name="companyName"
+    id="companyName"
+    type="text"
+    class="form-control"
+    name="companyName" />
+  </div>
+
+  <div class="form-group">
+    <label for="companyNation">Company Nation</label>
+    <input th:name="companyNation"
+           id="companyNation"
+           type="text"
+           class="form-control"
+           name="companyNation" />
+  </div>
+
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary btn-block">
+      REGISTER
+    </button>
+  </div>
+</form>
+</body>
+</html>
